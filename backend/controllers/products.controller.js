@@ -7,7 +7,7 @@ async function updateFeaturedProductCache(){
         const updatedProducts = await Product.find({isFeatured: true}).lean()
         await redis.set('featuredProducts', JSON.stringify(updatedProducts))
     } catch (error) {
-        console.log("Error in pdateFeaturedProductCache", error.message)
+        console.log("Error in updateFeaturedProductCache", error.message)
     }
 }
 

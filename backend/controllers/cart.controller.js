@@ -1,4 +1,4 @@
-import Product from "../models/product.model";
+import Product from "../models/product.model.js";
 
 export const addItemToCart = async (req, res) => {
     const {productId} = req.body

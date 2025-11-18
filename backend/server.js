@@ -4,6 +4,7 @@ import productRoutes from './routes/product.route.js'
 import cartRoutes from './routes/cart.route.js'
 import couponsRoutes from './routes/coupon.routes.js'
 import paymentRoutes from './routes/payments.route.js'
+import analyticsRoutes from './routes/analytics.route.js'
 import { connectDB } from "./lib/db.js"
 import dotenv from 'dotenv'
 import cookieParser from "cookie-parser"
@@ -21,6 +22,7 @@ app.use('/api/product', productRoutes)
 app.use('/api/cart', cartRoutes)
 app.use('/api/coupons', couponsRoutes)
 app.use('/api/payments' , paymentRoutes)
+app.use('/api/analytics' , analyticsRoutes)
 
 
 app.listen(PORT , () => {
